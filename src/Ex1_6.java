@@ -1,4 +1,3 @@
-package part1;
 
 /**
  * 
@@ -10,8 +9,8 @@ package part1;
  *	旋转后的NxN矩阵,保证N小于等于500，图像元素小于等于256。
  *
  */
-public class Ex_1_6 {
-	private static int[][] transformImage(int[][] mat, int n) {
+public class Ex1_6 {
+    private static int[][] transformImage(int[][] mat, int n) {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < i; j++) {
