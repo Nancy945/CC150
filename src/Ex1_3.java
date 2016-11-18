@@ -9,6 +9,9 @@
  *
  */
 public class Ex1_3 {
+
+	private static int f;
+
 	public static boolean checkSam(String stringA, String stringB) {
         if(stringA.length() != stringB.length())
         	return false;
@@ -19,7 +22,8 @@ public class Ex1_3 {
         		return false;
         	}else{
         		stringB.replace(c,"");
-        	}
+				f = 0;
+			}
         }
 		
 		return true;
