@@ -57,7 +57,7 @@ public class Ex4_2 {
 
 
     /**
-     * 深度优先搜索
+     * 深度优先搜索(递归)
      */
     private boolean checkDFS(UndirectedGraphNode a, UndirectedGraphNode b) {
 
@@ -94,6 +94,9 @@ public class Ex4_2 {
 
     }
 
+    /**
+     * 广度优先搜索
+     */
     private boolean checkBFS(UndirectedGraphNode a, UndirectedGraphNode b) {
 
         if (a == null || b == null) {
