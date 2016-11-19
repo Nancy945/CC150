@@ -13,19 +13,19 @@
 import java.util.*;
 
 
-public class Ex2_5 {
-    class ListNode {
-        int val;
-        ListNode next = null;
+class ListNode {
+    int val;
+    ListNode next = null;
 
-        ListNode(int val) {
-            this.val = val;
-        }
-
-
+    ListNode(int val) {
+        this.val = val;
     }
+}
 
-    public ListNode plusAB(ListNode a, ListNode b) {
+
+public class Ex2_5 {
+
+    public static ListNode plusAB(ListNode a, ListNode b) {
         ListNode ret = null;
 
         ListNode pos = null;
@@ -33,13 +33,11 @@ public class Ex2_5 {
 
         while (a != null || b != null) {
 
-
             int valA = 0;
             if (a != null) {
                 valA = a.val;
                 a = a.next;
             }
-
             int valB = 0;
             if (b != null) {
                 valB = b.val;
@@ -49,28 +47,21 @@ public class Ex2_5 {
             int result = valA + valB + carried;
             int val = result % 10;//个位
             carried = result / 10;//进位
-
-
             ListNode newNode = new ListNode(val);
-
 
             if (pos == null) {
                 pos = newNode;
                 ret = pos;//保存头节点
             } else {
-                //找尾节点
-                while (pos.next != null) {
-                    pos = pos.next;
-                }
                 pos.next = newNode;
+                pos = pos.next;
             }
-
-
         }
 
+        //最后一位进位
         if (carried != 0) {
             //移到尾部,移动两个
-            pos.next.next = new ListNode(carried);
+            pos.next = new ListNode(carried);
         }
 
         return ret;
@@ -109,6 +100,16 @@ public class Ex2_5 {
         }
         System.out.println(sb);
         System.out.println();
+    }
+
+    public static void main(String[] args) {
+        ListNode a = new ListNode(0);
+        ListNode b = new ListNode(0);
+        a.next = new ListNode(1);
+        a.next.next = new ListNode(1);
+
+        print(plusAB(a, b));
+
     }
 
 }
