@@ -13,19 +13,18 @@
 import java.util.*;
 
 
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
-
 public class Ex2_5 {
 
-    public static ListNode plusAB(ListNode a, ListNode b) {
+    private class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public ListNode plusAB(ListNode a, ListNode b) {
         ListNode ret = null;
 
         ListNode pos = null;
@@ -103,12 +102,13 @@ public class Ex2_5 {
     }
 
     public static void main(String[] args) {
-        ListNode a = new ListNode(0);
-        ListNode b = new ListNode(0);
-        a.next = new ListNode(1);
-        a.next.next = new ListNode(1);
+        Ex2_5 obj = new Ex2_5();
+        ListNode a = obj.new ListNode(0);
+        ListNode b = obj.new ListNode(0);
+        a.next = obj.new ListNode(1);
+        a.next.next = obj.new ListNode(1);
 
-        print(plusAB(a, b));
+        print(obj.plusAB(a, b));
 
     }
 

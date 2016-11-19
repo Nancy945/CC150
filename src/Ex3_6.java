@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Ex3_6 {
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new Ex3_6().twoStacksSort(new int[]{2, 7, 3, 4, 5, 1});
+        ArrayList<Integer> list = new Ex3_6().twoStacksSort(new int[]{2, 7, 3, 4, 1});
         System.out.println(list);
     }
 
