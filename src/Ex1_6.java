@@ -1,7 +1,5 @@
-package part1;
 
 /**
- * 
  * @author 余屌丝
  *  题目描述
  *	有一副由NxN矩阵表示的图像，这里每个像素用一个int表示，
@@ -10,8 +8,8 @@ package part1;
  *	旋转后的NxN矩阵,保证N小于等于500，图像元素小于等于256。
  *
  */
-public class Ex_1_6 {
-	private static int[][] transformImage(int[][] mat, int n) {
+public class Ex1_6 {
+    private static int[][] transformImage(int[][] mat, int n) {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < i; j++) {
