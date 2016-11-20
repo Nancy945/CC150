@@ -22,7 +22,7 @@ public class EX2_4 {
              
         ListNode sma = new ListNode(0),big = new ListNode(0),s = sma,b = big;
          
-        while (pHead.next != null) {
+        while (pHead != null) {
             if (pHead.val < x) {
                 s.next = new ListNode(pHead.val);
                 s = s.next;
@@ -32,13 +32,7 @@ public class EX2_4 {
             }
             pHead = pHead.next;
         }
-        if (pHead.val < x) {
-            s.next = new ListNode(pHead.val);
-            s = s.next;
-        } else {
-            b.next = new ListNode(pHead.val);
-            b = b.next;
-        }
+        
         s.next = big.next;
         return sma.next;
     }
