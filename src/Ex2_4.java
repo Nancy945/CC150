@@ -4,7 +4,7 @@
  */
 
 
-public class EX2_4 {
+public class Ex2_4 {
 
     private class ListNode {
         int val;

@@ -9,7 +9,7 @@
 
 import java.util.*;
 
-public class EX3_3 {
+public class Ex3_3 {
     public ArrayList<ArrayList<Integer>> setOfStacks(int[][] ope, int size) {
         // write code here
         if (ope.length == 0)

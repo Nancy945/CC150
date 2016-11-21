@@ -11,7 +11,7 @@
 */
 
 
-public class EX1_5 {
+public class Ex1_5 {
     public String zipString(String iniString) {
         // write code here
         if (iniString == null) {
