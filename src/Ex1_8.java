@@ -10,7 +10,7 @@
  * 返回：true
  */
 
-public class EX1_8 {
+public class Ex1_8 {
     public boolean checkReverseEqual(String s1, String s2) {
         // write code here
         if (s1.length() != s2.length()) {
