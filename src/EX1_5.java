@@ -1,4 +1,4 @@
-/*
+/**
 利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。
 比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。
 给定一个string iniString为待压缩的串(长度小于等于10000)，
@@ -9,8 +9,8 @@
 "welcometonowcoderrrrr"
 返回："welcometonowcoderrrrr"
 */
-import java.util.*;
- 
+
+
 public class EX1_5 {
     public String zipString(String iniString) {
         // write code here
