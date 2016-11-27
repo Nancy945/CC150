@@ -41,6 +41,7 @@ public class Ex4_7 {
                     j >>= 1;
                 }
             }
+
             return i;
         }
     }
