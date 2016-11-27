@@ -19,6 +19,7 @@ public class Ex4_3 {
             size >>= 1;
         }
 
+
         return height;
     }
 
