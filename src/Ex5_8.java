@@ -9,6 +9,14 @@
  */
 public class Ex5_8 {
 
+    /**
+     *  基本上大意就是从第x 到第y位 ，其中的像素全部变为1，如此两种情况 ：
+     *  0-->1, 1-->1 ，所以这时候就很清楚的用 位操作中的 |
+     * @param screen
+     * @param x
+     * @param y
+     * @return
+     */
     private static int[] renderPixel(int[] screen, int x, int y) {
         for (int i = x; i <= y; i++) {
             screen[i / 8] = screen[i / 8] | 1 << i % 8;
