@@ -29,4 +29,20 @@ public class Ex9_2_2 {
         }
         return res[x - 1][y - 1];
     }
+
+    public int countWays1(int[][] map, int x, int y) {
+        int[][] dp = new int[x][y];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                if (map[i][j] != 1) continue;
+                if (i == 0 && j == 0) dp[0][0] = 1;
+                else if (i != 0 && j == 0) dp[i][0] = dp[i - 1][0];
+                else if (i == 0 && j != 0) dp[0][j] = dp[0][j - 1];
+                else {
+                    dp[i][j] = (dp[i][j - 1] + dp[i - 1][j]) % 1000000007;
+                }
+            }
+        }
+        return dp[x - 1][y - 1];
+    }
 }
