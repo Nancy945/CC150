@@ -61,7 +61,7 @@ public class Ex7_7 {
         if (k <= 3) {
             return array[k];
         }
-        int index3 = 1, index5 = 1, index7 = 1;//记录当前使用3、5、7的个数
+        int index3 = 1, index5 = 1, index7 = 1;//记录当前使用3、5、7的个数，个数每增加一次，对应于结果数组的索引也增加一个
         int i = 4;
         while (i <= k) {
             while (array[index3] * 3 <= array[i - 1]) {
