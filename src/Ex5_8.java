@@ -15,7 +15,6 @@ public class Ex5_8 {
      * @param screen
      * @param x
      * @param y
-     * @return
      */
     private static int[] renderPixel(int[] screen, int x, int y) {
         for (int i = x; i <= y; i++) {
@@ -23,4 +22,6 @@ public class Ex5_8 {
         }
         return screen;
     }
+
+
 }
