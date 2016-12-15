@@ -6,7 +6,8 @@
  *  返回：4
  */
 import java.util.*;
-public class EX5_5 {
+
+public class Ex5_5 {
     private static int calcCost1(int A,int B){
         int t1 = A & B;
         int t2 = A | B;

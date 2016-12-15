@@ -6,7 +6,7 @@
  *    1024，19，2，6
  *     返回：1100
  */
-public class EX5_1 {
+public class Ex5_1 {
     private int binInsert(int n,int m,int j,int i){
         String a = Integer.toBinaryString(n);
         String b = Integer.toBinaryString(m);
