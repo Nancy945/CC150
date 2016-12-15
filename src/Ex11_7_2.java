@@ -8,4 +8,7 @@
  * Url:https://github.com/Nancy945/CC150
  */
 public class Ex11_7_2 {
+    public int getHeight(int[] men, int n) {
+        return 1;
+    }
 }
