@@ -6,7 +6,7 @@
  * 值为1代表该格子有建筑，0代表没有建筑。同时给定矩阵的大小n和m(n和m均小于等于100)，
  * 请返回流到(n - 1,m - 1)的最早时间。保证洪水一定能流到终点。
  */
-public class nt01 {
+public class Nt1 {
     public static void main(String[] args) {
 
     }

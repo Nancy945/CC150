@@ -8,7 +8,7 @@ import java.util.*;
  * [11,13,10,5,12,21,3],7
  * 返回：[13,21,12,12,21,-1,-1]
  */
-public class Exnt6 {
+public class Nt6 {
     public static void main(String[] args) {
         int[] a = new int[]{118124, 179069, 58175, 243210, 39540, 245841, 55085, 150164, 133982, 129588, 15875, 49400};
         int[] r = findNext(a, 12);
