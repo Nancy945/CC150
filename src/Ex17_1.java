@@ -17,9 +17,9 @@ public class Ex17_1 {
 //        AB[1] = AB[0] ^ AB[1];
 //        AB[0] = AB[0] ^ AB[1];
 
-//        AB[0] = AB[0] - AB[1];
-//        AB[1] = AB[0] + AB[1];
-//        AB[0] = AB[1] - AB[0];
+        AB[0] = AB[0] - AB[1];
+        AB[1] = AB[0] + AB[1];
+        AB[0] = AB[1] - AB[0];
 
         return AB;
     }
