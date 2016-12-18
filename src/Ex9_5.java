@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * 题目描述
@@ -11,32 +13,47 @@ import java.util.ArrayList;
  * 返回：["CBA","CAB","BCA","BAC","ACB","ABC"]
  */
 public class Ex9_5 {
-    public static void arrangement(ArrayList<String> strings, String A, String temp) {
-        if (A.length() == 1) {
-            temp += A;
-            strings.add(temp.toString());
-        }
-        //先去第i个元素， 不取第一个元素
-        String str = new String();
-        str += A.charAt(0);
-        String AA = (String) A.subSequence(1, A.length());
-
-        arrangement(strings, AA, str);
-        //    arrangement(string);
-
-    }
 
     public ArrayList<String> getPermutation(String A) {
         // write code here
-        ArrayList<String> list = new ArrayList<>();
-        // arrangement(list,A);
-        return list;
+        if (A == null)
+            return null;
 
+        //终止条件
+        ArrayList<String> strings = new ArrayList<String>();
+        if (A.length() == 0) {
+            strings.add("");
+            return strings;
+        }
+
+
+        char first = A.charAt(0);
+        String sub = A.substring(1);//除掉
+        ArrayList<String> words = getPermutation(sub);
+
+        //f(n -1) ---> f(n) ： 在f(n) 的基础上插入字符
+        for (String word : words) {
+            //包含等号
+            for (int i = 0; i <= word.length(); i++) {
+                String newWords = istStr(word, first, i);
+                strings.add(newWords);
+            }
+        }
+
+
+        Collections.sort(strings, Collections.reverseOrder());
+        return strings;
+    }
+
+
+    private String istStr(String word, char c, int j) {
+        String pre = word.substring(0, j);
+        String end = word.substring(j);
+        return pre + c + end;
     }
 
     public static void main(String[] args) {
         String A = "ABC";
-        String B = (String) A.subSequence(1, A.length());
-        System.out.println(A + "  " + B);
+        System.out.println(new Ex9_5().getPermutation(A));
     }
 }
