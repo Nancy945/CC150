@@ -57,7 +57,7 @@ public class Ex18_10 {
         for (int i = 0; i < n; i++) {
             t = dic[i];
             count = 0;
-            if (s.length() != t.length())//长度不一致的不做判断
+            if (s.length() != t.length())//长度不一致直接跳过
                 continue;
             int j = 0;
             for (; j < s.length(); j++) {//逐位比较，如果不同位数超过1，直接结束
