@@ -10,6 +10,7 @@
  * [6,1,2,3,4,5],6,6
  * 返回：0
  */
+
 public class Ex11_2_1 {
     //在二分法的基础上，针对特殊情况的限制条件
     public static int findElement(int[] A, int n, int x) {
