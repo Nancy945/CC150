@@ -56,16 +56,18 @@ public class Ex9_8 {
         for (int i = 1; i <= coins.length; i++) {
             //初始条件： dp[i][0] = 1; 总数为0的硬币用i种货币表示  只有一种情况：所有的系数为0
             //           dp[0][j] = 0; 总数为j的硬币用i种货币表示  为0
+
             dp[i][0] = 1;
 
             for (int j = 1; j <= n; j++) {
 
                 for (int k = 0; k <= j / coins[i - 1]; ++k)
-                    dp[i][j] += dp[i - 1][j - k * coins[i - 1]];
+                    //    dp[i][j] += dp[i - 1][j - k * coins[i - 1]];
 
-               /* if(j < coins[i-1])
-                  dp[i][j] = dp[i-1][j];
-                  else dp[i][j] = dp[i-1][j] + dp[i][j-coins[i-1]];*/
+                    if (j < coins[i - 1])
+                        dp[i][j] = dp[i - 1][j];
+                    else
+                        dp[i][j] = (dp[i - 1][j] + dp[i][j - coins[i - 1]]) % 1000000007;
             }
         }
         return dp[coins.length][n];
@@ -75,7 +77,7 @@ public class Ex9_8 {
 
     public int countWays1(int n) {
         int coins[] = {1, 5, 10, 25};
-        int dp[] = new int[100001];
+        int dp[] = new int[n + 1];
         dp[0] = 1;
         for (int i = 0; i < 4; i++)
             for (int j = coins[i]; j <= n; j++)
@@ -86,7 +88,7 @@ public class Ex9_8 {
 
 
     public static void main(String[] args) {
-        System.out.println(new Ex9_8().countWays(100));
+        System.out.println(new Ex9_8().countWays1(100));
     }
 
 }

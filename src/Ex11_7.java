@@ -14,6 +14,8 @@ import java.util.Arrays;
  * 返回：4
  */
 public class Ex11_7 {
+
+
     //1 动态规划
     public static int getHeight1(int[] men, int n) {
         int[] dp = new int[n];
@@ -22,6 +24,7 @@ public class Ex11_7 {
         for (int i = 0; i < n; i++) {
             dp[i] = 1;//没有 自身1个
             for (int j = 0; j < i; j++) {
+                //比较 比当前值小的
                 //dp[j] 当前最大的子序列树  dp[i] 为包含自己的最大子序列  dp[i] - 1 除掉自己
                 //dp[j] > dp[i] - 1  在加入第j个位置时  dp[j] 比 dp[i] -1大
                 if (men[j] < men[i] && dp[j] > dp[i] - 1) {
@@ -35,6 +38,7 @@ public class Ex11_7 {
         }
         return max;
     }
+
 
     //2 最长公共子序列
     public int getHeight(int[] men, int n) {
